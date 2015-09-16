@@ -24,6 +24,7 @@ var TodoApp = (function () {
     };
     TodoApp.prototype.toggleTodoState = function (todo) {
         todo.done = !todo.done;
+        this.todoStore.sortList();
     };
     TodoApp = __decorate([
         angular2_1.Component({

@@ -7,10 +7,50 @@
   margin-bottom: 20px;
 }
 
-.todo-item {
+.todoList {
+  padding-bottom: 20px;
 
-  .done {
+  .noItemsMessage {
+    font-size: 20px;
+    color: darkgray;
+    font-weight: bold;
+  }
+}
+
+input.form-control {
+  font-size: 20px;
+  color: #333;
+  padding: 20px 10px;
+}
+
+.todoItem {
+  padding: 10px;
+  font-size: 24px;
+  color: #333;
+  font-weight: bold;
+  position: relative;
+  cursor: pointer;
+  border-bottom: 1px solid darkgray;
+
+  &:last-child {
+    border-bottom: none;
+  }
+
+  .checkbox {
+    font-size: 36px;
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: darkgray;
+  }
+
+  &.done {
     text-decoration: line-through;
     color: #999999;
+
+    .checkbox {
+      color: darkgreen;
+    }
   }
 }

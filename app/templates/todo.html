@@ -3,17 +3,18 @@
 </style>
 
 <div class="row">
-    <div class="col-xs-4 col-xs-offset-4">
+    <div class="col-xs-12">
         <div class="bottom-offset">
-            <input type="text" class="form-control" placeholder="Write something here" autofocus #newtodo
-                   (keyup)="add($event,newtodo)"/>
+            <input type="text" class="form-control" placeholder="Write something here" autofocus #newtodo (keyup)="add($event,newtodo)"/>
         </div>
-        <div *ng-for="#todo of todoStore.todoList">
-            <div *ng-if="todo" class="todo-item">
-                <input type="checkbox" [checked]="todo.done" (click)="toggleTodoState(todo)"/>
-                <span [class.done]="todo.done">{{todo.text}}</span>
+        <div class="todoList">
+            <div *ng-if="todoStore.todoList.length === 0" class="noItemsMessage">
+                Add to-do items above!
+            </div>
+            <div *ng-for="#todo of todoStore.todoList" class="todoItem" [class.done]="todo.done">
+                <span>{{todo.text}}</span>
+                <div class="checkbox fa fa-fw fa-check-square-o" (click)="toggleTodoState(todo)"></div>
             </div>
         </div>
     </div>
-    <div class="col-xs-4"></div>
 </div>

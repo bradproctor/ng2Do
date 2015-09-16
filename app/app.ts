@@ -27,6 +27,7 @@ class TodoApp {
 
     toggleTodoState(todo) {
         todo.done = !todo.done;
+        this.todoStore.sortList();
     }
 }
 
