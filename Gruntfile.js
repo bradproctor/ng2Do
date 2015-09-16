@@ -70,6 +70,15 @@ grunt.initConfig({
         }
     },
 
+    tslint: {
+        options: {
+            configuration: grunt.file.readJSON("tslint.json")
+        },
+        files: {
+            src: ['app/**/*.ts']
+        }
+    },
+
     connect: {
         server: {
             options: {
@@ -87,12 +96,13 @@ grunt.loadNpmTasks('grunt-contrib-connect');
 grunt.loadNpmTasks('grunt-contrib-copy');
 grunt.loadNpmTasks('grunt-contrib-less');
 grunt.loadNpmTasks('grunt-contrib-watch');
+grunt.loadNpmTasks('grunt-tslint');
 grunt.loadNpmTasks('grunt-typescript');
 
 grunt.registerTask(
     'build',
     'Compiles all assets and source files into build directory.',
-    ['clean', 'less', 'typescript', 'copy']
+    ['clean', 'tslint', 'less', 'typescript', 'copy']
 );
 
 grunt.registerTask(

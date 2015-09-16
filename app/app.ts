@@ -14,7 +14,7 @@ import {TodoStore} from 'services/TodoStore';
 class TodoApp {
     todoStore: TodoStore;
 
-    constructor(todoStore:TodoStore) {
+    constructor(todoStore: TodoStore) {
         this.todoStore = todoStore;
     }
 
