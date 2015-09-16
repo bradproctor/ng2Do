@@ -15,7 +15,7 @@ export class TodoStore {
         this.todoList.sort(function(a: TodoItem, b: TodoItem) {
             if (a.done) {
                 if (b.done) {
-                    return a.timeCreated > b.timeCreated ? -1 : 1;
+                    return a.timeCreated > b.timeCreated ? 1 : -1;
                 } else {
                     return 1;
                 }
@@ -23,7 +23,7 @@ export class TodoStore {
                 if (b.done) {
                     return -1;
                 } else {
-                    return a.timeCreated > b.timeCreated ? -1 : 1;
+                    return a.timeCreated > b.timeCreated ? 1 : -1;
                 }
             }
         });

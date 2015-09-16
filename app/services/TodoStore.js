@@ -10,7 +10,7 @@ var TodoStore = (function () {
         this.todoList.sort(function (a, b) {
             if (a.done) {
                 if (b.done) {
-                    return a.timeCreated > b.timeCreated ? -1 : 1;
+                    return a.timeCreated > b.timeCreated ? 1 : -1;
                 }
                 else {
                     return 1;
@@ -21,7 +21,7 @@ var TodoStore = (function () {
                     return -1;
                 }
                 else {
-                    return a.timeCreated > b.timeCreated ? -1 : 1;
+                    return a.timeCreated > b.timeCreated ? 1 : -1;
                 }
             }
         });

@@ -17,9 +17,11 @@ var TodoApp = (function () {
         this.todoStore = todoStore;
     }
     TodoApp.prototype.add = function ($event, newTodo) {
-        if ($event.which === 13) {
-            this.todoStore.add(newTodo.value);
-            newTodo.value = '';
+        if (newTodo.value !== '') {
+            if ($event.which === 13) {
+                this.todoStore.add(newTodo.value);
+                newTodo.value = '';
+            }
         }
     };
     TodoApp.prototype.toggleTodoState = function (todo) {

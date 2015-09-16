@@ -19,9 +19,11 @@ class TodoApp {
     }
 
     add($event, newTodo) {
-        if ($event.which === 13) {
-            this.todoStore.add(newTodo.value);
-            newTodo.value = '';
+        if (newTodo.value !== '') {
+            if ($event.which === 13) {
+                this.todoStore.add(newTodo.value);
+                newTodo.value = '';
+            }
         }
     }
 
