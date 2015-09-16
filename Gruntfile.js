@@ -19,8 +19,7 @@ grunt.initConfig({
             cwd: 'app',
             src: [
                 '**/*.js',
-                '**/*.html',
-                'styles/*.css'
+                '**/*.html'
             ],
             dest: 'build',
             expand: true
@@ -38,8 +37,8 @@ grunt.initConfig({
 
     less: {
         development: {
-            cwd: 'styles',
-            dest: 'styles',
+            cwd: 'app/styles',
+            dest: 'build/styles',
             src: '**/*.less',
             ext: '.css',
             expand: true
