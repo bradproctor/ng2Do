@@ -1,0 +1,36 @@
+<!-- index.html -->
+<html>
+<head>
+    <title>To-do</title>
+    <script src="https://github.jspm.io/jmcriffey/bower-traceur-runtime@0.0.87/traceur-runtime.js"></script>
+    <script src="https://jspm.io/system@0.16.js"></script>
+    <script src="https://code.angularjs.org/2.0.0-alpha.28/angular2.dev.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="/styles/global.css"/>
+    <link rel="stylesheet" type="text/css" href="/styles/index.css"/>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-xs-4 col-xs-offset-4">
+            <h1 class="mainTitle">
+                To-do List
+            </h1>
+        </div>
+    </div>
+    <todo-app></todo-app>
+</div>
+
+<script>
+    System.paths = {
+        'angular2/*': '/typings/angular2/*.js',
+        'services/*': '/services/*.js',
+        'rx': '/typings/rx/rx.d.ts',
+        'app': '/app.js'
+    };
+
+    System.import("app");
+</script>
+
+</body>
+</html>
