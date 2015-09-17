@@ -4,6 +4,10 @@
   "author": {
     "name": "Brad Proctor"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cineris/ng2Do.git"
+  },
   "description": "Simple to-do list written in Angular 2.0",
   "license": "GPL-3.0",
   "devDependencies": {
