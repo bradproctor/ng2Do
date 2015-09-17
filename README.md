@@ -6,4 +6,4 @@ Simple To-do app written with Angular2
 - Run `npm install`
 - Run `grunt serve`
 
-Happp Hacking!
+Happy Hacking!
