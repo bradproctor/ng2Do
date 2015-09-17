@@ -1,8 +1,18 @@
 {
-  "name": "application-name",
+  "name": "ng2Do",
   "version": "0.0.1",
+  "author": {
+    "name": "Brad Proctor"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cineris/ng2Do.git"
+  },
+  "description": "Simple to-do list written in Angular 2.0",
+  "license": "GPL-3.0",
   "devDependencies": {
     "grunt": "^0.4.5",
+    "grunt-cli": "^0.1.13",
     "grunt-contrib-clean": "^0.6.0",
     "grunt-contrib-connect": "^0.11.2",
     "grunt-contrib-copy": "^0.8.1",
